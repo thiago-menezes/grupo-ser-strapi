@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "e_mecs",
+  "info": {
+    "singularName": "e-mec",
+    "pluralName": "e-mecs",
+    "displayName": "/ E-mec"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "qrcode": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "link": {
+      "type": "string"
+    },
+    "instituicao": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::institution.institution"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "areas_de_interesses",
+  "info": {
+    "singularName": "areas-de-interesse",
+    "pluralName": "areas-de-interesses",
+    "displayName": "Home / Áreas de interesse"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "subareas": {
+      "type": "blocks"
+    },
+    "capa": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "instituicao": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::institution.institution"
+    }
+  }
+}

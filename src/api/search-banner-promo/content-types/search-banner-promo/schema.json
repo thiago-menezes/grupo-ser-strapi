@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "search_banner_promos",
+  "info": {
+    "singularName": "search-banner-promo",
+    "pluralName": "search-banner-promos",
+    "displayName": "Busca / Banner promocional"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "imagem": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "link": {
+      "type": "string"
+    },
+    "instituicao": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::institution.institution"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_promo_banners",
+  "info": {
+    "singularName": "home-promo-banner",
+    "pluralName": "home-promo-banners",
+    "displayName": "Home / Banners promocionais"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "imagem": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "link": {
+      "type": "string"
+    },
+    "instituicao": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::institution.institution"
+    }
+  }
+}

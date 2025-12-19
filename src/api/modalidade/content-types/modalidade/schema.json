@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "modalidades",
+  "info": {
+    "singularName": "modalidade",
+    "pluralName": "modalidades",
+    "displayName": "Modalidade"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "curso_detalhes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course.course",
+      "mappedBy": "modalidades"
+    },
+    "curso_corpo_docentes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::corpo-docente.corpo-docente",
+      "mappedBy": "modalidades"
+    }
+  }
+}

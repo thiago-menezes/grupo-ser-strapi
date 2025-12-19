@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "units",
+  "info": {
+    "singularName": "unit",
+    "pluralName": "units",
+    "displayName": "/ Unidades",
+    "description": "Infrastructure units (campuses) for institutions"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "latitude": {
+      "type": "decimal",
+      "required": true,
+      "min": -90,
+      "max": 90
+    },
+    "longitude": {
+      "type": "decimal",
+      "required": true,
+      "min": -180,
+      "max": 180
+    },
+    "fotos": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "bairro": {
+      "type": "string",
+      "required": true
+    },
+    "cidade": {
+      "type": "string",
+      "required": true
+    },
+    "estado": {
+      "type": "string",
+      "required": true
+    },
+    "numero": {
+      "type": "string",
+      "required": true
+    },
+    "cep": {
+      "type": "string",
+      "required": true
+    },
+    "complemento": {
+      "type": "string"
+    },
+    "rua": {
+      "type": "string",
+      "required": true
+    },
+    "instituicao": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::institution.institution"
+    },
+    "id_unidade": {
+      "type": "biginteger"
+    },
+    "curso_detalhes": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "unidades"
+    }
+  }
+}

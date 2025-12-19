@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coordenacoes",
+  "info": {
+    "singularName": "coordenacao",
+    "pluralName": "coordenacoes",
+    "displayName": "Curso / Coordenação"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "descricao": {
+      "type": "text"
+    },
+    "telefone": {
+      "type": "string",
+      "regex": "^\\(\\d{2}\\)\\s\\d{5}-\\d{4}$"
+    },
+    "foto": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "instituicao": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::institution.institution"
+    },
+    "curso_detalhes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::course.course",
+      "mappedBy": "curso_coordenacao"
+    }
+  }
+}

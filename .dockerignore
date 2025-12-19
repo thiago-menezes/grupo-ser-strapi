@@ -1,0 +1,60 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Testing
+coverage
+*.test.ts
+*.test.js
+
+# Strapi build
+.strapi
+.tmp
+build/
+.cache/
+
+# Production
+/dist
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env*.local
+.env.development
+.env.test
+
+# Git
+.git
+.gitignore
+.github
+
+# Editor directories
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Documentation
+README.md
+CHANGELOG.md
+docs/
+
+# CI/CD
+.github/
+
+# Database (local only)
+data/
+*.db
+*.sqlite
+
+# Misc
+*.log

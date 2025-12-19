@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "perguntas_frequentes",
+  "info": {
+    "singularName": "pergunta-frequente",
+    "pluralName": "perguntas-frequentes",
+    "displayName": "Home / Perguntas Frequentes"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pergunta": {
+      "type": "text",
+      "required": true
+    },
+    "resposta": {
+      "type": "text",
+      "required": true
+    },
+    "instituicoes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::institution.institution",
+      "mappedBy": "home_pergunta_frequente"
+    }
+  }
+}

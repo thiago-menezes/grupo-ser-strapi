@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "corpo_de_docentes",
+  "info": {
+    "singularName": "corpo-docente",
+    "pluralName": "corpo-de-docentes",
+    "displayName": "Curso / Corpo docente"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "materia": {
+      "type": "text"
+    },
+    "cursos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course.course",
+      "mappedBy": "curso_corpo_docentes"
+    },
+    "modalidades": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::modalidade.modalidade",
+      "inversedBy": "curso_corpo_docentes"
+    }
+  }
+}
