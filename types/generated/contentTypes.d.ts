@@ -565,6 +565,7 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::corpo-docente.corpo-docente'
     >;
+    destaque: Schema.Attribute.Boolean;
     duracao: Schema.Attribute.Integer & Schema.Attribute.Required;
     grade_curricular: Schema.Attribute.RichText;
     id_do_curso: Schema.Attribute.String;

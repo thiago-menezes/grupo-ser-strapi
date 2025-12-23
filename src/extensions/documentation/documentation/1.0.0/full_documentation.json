@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://opensource.org/licenses/MIT"
     },
-    "x-generation-date": "2025-12-19T22:42:36.779Z"
+    "x-generation-date": "2025-12-23T17:51:33.773Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -9651,6 +9651,9 @@
                       "projeto_pedagogico": {
                         "type": "string"
                       },
+                      "destaque": {
+                        "type": "boolean"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -11704,6 +11707,9 @@
                     "projeto_pedagogico": {
                       "type": "string"
                     },
+                    "destaque": {
+                      "type": "boolean"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -13567,6 +13573,9 @@
                 "projeto_pedagogico": {
                   "type": "string"
                 },
+                "destaque": {
+                  "type": "boolean"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -13813,6 +13822,9 @@
               },
               "projeto_pedagogico": {
                 "type": "string"
+              },
+              "destaque": {
+                "type": "boolean"
               },
               "locale": {
                 "type": "string"
@@ -15368,6 +15380,9 @@
                     "projeto_pedagogico": {
                       "type": "string"
                     },
+                    "destaque": {
+                      "type": "boolean"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -15624,6 +15639,9 @@
           },
           "projeto_pedagogico": {
             "type": "string"
+          },
+          "destaque": {
+            "type": "boolean"
           },
           "createdAt": {
             "type": "string",
@@ -17263,6 +17281,9 @@
                     },
                     "projeto_pedagogico": {
                       "type": "string"
+                    },
+                    "destaque": {
+                      "type": "boolean"
                     },
                     "createdAt": {
                       "type": "string",
@@ -19165,6 +19186,9 @@
                     },
                     "projeto_pedagogico": {
                       "type": "string"
+                    },
+                    "destaque": {
+                      "type": "boolean"
                     },
                     "createdAt": {
                       "type": "string",
@@ -21329,6 +21353,9 @@
                     "projeto_pedagogico": {
                       "type": "string"
                     },
+                    "destaque": {
+                      "type": "boolean"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -23389,6 +23416,9 @@
                 "projeto_pedagogico": {
                   "type": "string"
                 },
+                "destaque": {
+                  "type": "boolean"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -25108,6 +25138,9 @@
                 "projeto_pedagogico": {
                   "type": "string"
                 },
+                "destaque": {
+                  "type": "boolean"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -26693,6 +26726,9 @@
                       },
                       "projeto_pedagogico": {
                         "type": "string"
+                      },
+                      "destaque": {
+                        "type": "boolean"
                       },
                       "createdAt": {
                         "type": "string",
@@ -28528,6 +28564,9 @@
                     },
                     "projeto_pedagogico": {
                       "type": "string"
+                    },
+                    "destaque": {
+                      "type": "boolean"
                     },
                     "createdAt": {
                       "type": "string",
@@ -30408,6 +30447,9 @@
                     },
                     "projeto_pedagogico": {
                       "type": "string"
+                    },
+                    "destaque": {
+                      "type": "boolean"
                     },
                     "createdAt": {
                       "type": "string",
@@ -32404,6 +32446,9 @@
                     },
                     "projeto_pedagogico": {
                       "type": "string"
+                    },
+                    "destaque": {
+                      "type": "boolean"
                     },
                     "createdAt": {
                       "type": "string",

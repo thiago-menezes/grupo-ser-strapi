@@ -79,6 +79,9 @@
     },
     "projeto_pedagogico": {
       "type": "richtext"
+    },
+    "destaque": {
+      "type": "boolean"
     }
   }
 }
