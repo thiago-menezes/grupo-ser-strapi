@@ -59,23 +59,11 @@
       "target": "api::unit.unit",
       "mappedBy": "curso_detalhes"
     },
-    "curso_coordenacao": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::coordenacao.coordenacao",
-      "inversedBy": "curso_detalhes"
-    },
     "curso_corpo_docentes": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::corpo-docente.corpo-docente",
       "inversedBy": "cursos"
-    },
-    "modalidades": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::modalidade.modalidade",
-      "inversedBy": "curso_detalhes"
     },
     "projeto_pedagogico": {
       "type": "richtext"

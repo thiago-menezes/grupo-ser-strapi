@@ -479,12 +479,9 @@ export interface ApiCoordenacaoCoordenacao extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    curso_detalhes: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::course.course'
-    >;
     descricao: Schema.Attribute.Text;
     foto: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    id_do_curso: Schema.Attribute.String;
     instituicao: Schema.Attribute.Relation<
       'oneToOne',
       'api::institution.institution'
@@ -520,6 +517,7 @@ export interface ApiCorpoDocenteCorpoDocente
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     cursos: Schema.Attribute.Relation<'manyToMany', 'api::course.course'>;
+    ids_dos_cursos: Schema.Attribute.Blocks;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -557,10 +555,6 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    curso_coordenacao: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::coordenacao.coordenacao'
-    >;
     curso_corpo_docentes: Schema.Attribute.Relation<
       'manyToMany',
       'api::corpo-docente.corpo-docente'
@@ -580,15 +574,40 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     metodologia: Schema.Attribute.RichText;
-    modalidades: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::modalidade.modalidade'
-    >;
     nome: Schema.Attribute.String & Schema.Attribute.Required;
     projeto_pedagogico: Schema.Attribute.RichText;
     publishedAt: Schema.Attribute.DateTime;
     sobre: Schema.Attribute.RichText;
     unidades: Schema.Attribute.Relation<'oneToMany', 'api::unit.unit'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCursoFaqCursoFaq extends Struct.CollectionTypeSchema {
+  collectionName: 'curso_faqs';
+  info: {
+    displayName: 'Curso / FAQ';
+    pluralName: 'curso-faqs';
+    singularName: 'curso-faq';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.JSON;
+    id_do_curso: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::curso-faq.curso-faq'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -753,10 +772,7 @@ export interface ApiModalidadeModalidade extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::corpo-docente.corpo-docente'
     >;
-    curso_detalhes: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::course.course'
-    >;
+    ids_dos_cursos: Schema.Attribute.Blocks;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -896,6 +912,7 @@ export interface ApiUnitUnit extends Struct.CollectionTypeSchema {
     estado: Schema.Attribute.String & Schema.Attribute.Required;
     fotos: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
     id_unidade: Schema.Attribute.BigInteger;
+    ids_dos_cursos: Schema.Attribute.Blocks;
     instituicao: Schema.Attribute.Relation<
       'oneToOne',
       'api::institution.institution'
@@ -1483,6 +1500,7 @@ declare module '@strapi/strapi' {
       'api::coordenacao.coordenacao': ApiCoordenacaoCoordenacao;
       'api::corpo-docente.corpo-docente': ApiCorpoDocenteCorpoDocente;
       'api::course.course': ApiCourseCourse;
+      'api::curso-faq.curso-faq': ApiCursoFaqCursoFaq;
       'api::e-mec.e-mec': ApiEMecEMec;
       'api::home-carousel.home-carousel': ApiHomeCarouselHomeCarousel;
       'api::home-promo-banner.home-promo-banner': ApiHomePromoBannerHomePromoBanner;

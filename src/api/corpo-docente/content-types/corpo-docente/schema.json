@@ -28,6 +28,9 @@
       "relation": "manyToMany",
       "target": "api::modalidade.modalidade",
       "inversedBy": "curso_corpo_docentes"
+    },
+    "ids_dos_cursos": {
+      "type": "blocks"
     }
   }
 }

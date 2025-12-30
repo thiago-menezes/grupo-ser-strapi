@@ -76,6 +76,9 @@
       "relation": "manyToOne",
       "target": "api::course.course",
       "inversedBy": "unidades"
+    },
+    "ids_dos_cursos": {
+      "type": "blocks"
     }
   }
 }

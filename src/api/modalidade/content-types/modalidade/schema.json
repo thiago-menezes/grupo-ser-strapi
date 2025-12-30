@@ -14,17 +14,14 @@
     "nome": {
       "type": "string"
     },
-    "curso_detalhes": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::course.course",
-      "mappedBy": "modalidades"
-    },
     "curso_corpo_docentes": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::corpo-docente.corpo-docente",
       "mappedBy": "modalidades"
+    },
+    "ids_dos_cursos": {
+      "type": "blocks"
     }
   }
 }

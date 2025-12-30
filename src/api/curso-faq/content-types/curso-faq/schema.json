@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "curso_faqs",
+  "info": {
+    "singularName": "curso-faq",
+    "pluralName": "curso-faqs",
+    "displayName": "Curso / FAQ"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_do_curso": {
+      "type": "string"
+    },
+    "faq": {
+      "type": "json"
+    }
+  }
+}
