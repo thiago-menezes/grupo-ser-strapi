@@ -617,7 +617,7 @@ export interface ApiCursoFaqCursoFaq extends Struct.CollectionTypeSchema {
 export interface ApiEMecEMec extends Struct.CollectionTypeSchema {
   collectionName: 'e_mecs';
   info: {
-    displayName: '/ E-mec';
+    displayName: '/ E-mec 400x400';
     pluralName: 'e-mecs';
     singularName: 'e-mec';
   };
@@ -649,7 +649,7 @@ export interface ApiHomeCarouselHomeCarousel
   collectionName: 'home_carousels';
   info: {
     description: 'Banners do carrossel da home. Formato recomendado: 1800x720px (propor\u00E7\u00E3o 5:2)';
-    displayName: 'Home / Carrossel';
+    displayName: 'Home / Carrossel 1800x720';
     pluralName: 'home-carousels';
     singularName: 'home-carousel';
   };
@@ -684,7 +684,7 @@ export interface ApiHomePromoBannerHomePromoBanner
   extends Struct.CollectionTypeSchema {
   collectionName: 'home_promo_banners';
   info: {
-    displayName: 'Home / Banners promocionais';
+    displayName: 'Home / Banners promocionais 200x190';
     pluralName: 'home-promo-banners';
     singularName: 'home-promo-banner';
   };
@@ -825,7 +825,7 @@ export interface ApiSearchBannerPromoSearchBannerPromo
   extends Struct.CollectionTypeSchema {
   collectionName: 'search_banner_promos';
   info: {
-    displayName: 'Busca / Banner promocional';
+    displayName: 'Busca / Banner promocional 800x120';
     pluralName: 'search-banner-promos';
     singularName: 'search-banner-promo';
   };
